@@ -155,8 +155,47 @@ form{
     bottom: 0px
 }
 .container-footer{
+    display: flex;
+    justify-content: center;
     margin-top: 35%;
     padding: 25px 0;
-    background-color: #0d3051;
+    background-color: #004a80;
     width: 100%;
+}
+.pcn-footer{
+    display: flex;
+    margin-top: 8%;
+    width: 100%;
+}
+.pcn-footer h1{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+.pcn-footer h5{
+    text-transform: uppercase;
+    color: #004a80;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+.pcn-footer p{
+    font-size: 12px;
+    font-weight: 200;
+}
+.pcn-footer a, li{
+    text-decoration: none;
+    font-size: 12px;
+    margin: 7% 0;
+    list-style: none;
+    color: #011111;
+}
+.small-footer{
+    margin-top: 50px;
+    height: 23px;
+    background-color: #e0e0e0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px;
+    font-weight: 200;
 }
