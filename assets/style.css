@@ -103,7 +103,8 @@ hr{
     position: relative;
 }
 .solutions-box:hover{
-    background-color: #deeefa;
+    background-color: #e5f2ff;
+    box-shadow: #004a80;
 }
 .solutions-box img{
     margin: 0 0 15% 0;
@@ -288,6 +289,7 @@ form{
 .btn:hover {
     background-color:#0179d0;
     color: white;
+    border: none;
 }
 .pcn-row-2{
     display: flex;
