@@ -102,6 +102,9 @@ hr{
     border-radius: 5px;
     position: relative;
 }
+.solutions-box:hover{
+    background-color: #deeefa;
+}
 .solutions-box img{
     margin: 0 0 15% 0;
 }
