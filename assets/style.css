@@ -19,7 +19,7 @@
 }
 .carousel-inner img {
     width: 100%;
-    height: 700px;
+    height: 100%;
     background-size: cover;
 }
 .carousel-caption{
@@ -52,15 +52,15 @@
 }
 .carousel-btn{
     position: absolute;
-    bottom: 25%;
-    right: 10%;
-    padding: 1% 4%;
+    bottom: 5vw;
+    right: 10vw;
+    padding: 1vw 4vw;
     border-radius: 5px;
     border-width: 1px;
     border-color: #ffffff;
     color: #ffffff;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 20px;
 }
 hr{
     width: 15%;
@@ -86,7 +86,6 @@ hr{
 }
 .solutions{
     margin: 5% 10%;
-    display: flex;
 }
 .solutions h1{
     font-weight: 600;
@@ -97,10 +96,11 @@ hr{
     font-size:14px;
 }
 .solutions-box{
-    margin: 0 2% 0 0;
-    padding: 5%;
+    margin: 25% 2% 1% 0;
+    padding: 10%;
     border-radius: 5px;
     position: relative;
+    height: 450px;
 }
 .solutions-box:hover{
     background-color: #e5f2ff;
@@ -109,18 +109,47 @@ hr{
 .solutions-box img{
     margin: 0 0 15% 0;
 }
-.pcn-btn{
+.btn{
     background-color: #004a80;
     color: #ffffff;
-    text-align: center;
-    font-size: 18px;
     font-weight: 200;
-    padding: 6% 8%;
-    border: none;
+    padding: 20px 0;
     border-radius: 5px;
     width: 100%;
-    height: 18%;
     margin: 3% 0;
+}
+
+.footer h1{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+.footer h5{
+    text-transform: uppercase;
+    color: #004a80;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+.footer p{
+    font-size: 12px;
+    font-weight: 200;
+}
+.footer a, li{
+    text-decoration: none;
+    font-size: 12px;
+    margin: 7% 0;
+    list-style: none;
+    color: #011111;
+}
+.small-footer{
+    margin-top: 50px;
+    height: 23px;
+    background-color: #e0e0e0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px;
+    font-weight: 200;
 }
 
 .form-bg{
@@ -200,43 +229,7 @@ form{
     background-color: #004a80;
     width: 100%;
 }
-.pcn-footer{
-    display: flex;
-    margin-top: 8%;
-    width: 100%;
-}
-.pcn-footer h1{
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 3%;
-}
-.pcn-footer h5{
-    text-transform: uppercase;
-    color: #004a80;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 3%;
-}
-.pcn-footer p{
-    font-size: 12px;
-    font-weight: 200;
-}
-.pcn-footer a, li{
-    text-decoration: none;
-    font-size: 12px;
-    margin: 7% 0;
-    list-style: none;
-    color: #011111;
-}
-.small-footer{
-    margin-top: 50px;
-    height: 23px;
-    background-color: #e0e0e0;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 10px;
-    font-weight: 200;
-}
+
 .pcn-hero{
     padding:7% 10% 20% 10%;
     background-image: url(./images/higher-ed-herobg.png);
