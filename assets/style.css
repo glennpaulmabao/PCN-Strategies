@@ -213,6 +213,13 @@ hr{
     background-image: url(./images/dc-form-bg.png);
     background-color: #0d3051;
 }
+.educ-form-bg{
+    margin: 10% 0 0 0;
+    height: 654px;
+    width: 100%;
+    background-image: url(./images/educ-form-bg.png);
+    background-color: #0d3051;
+}
 .security-formbg{
     height: 654px;
     width: 100%;
