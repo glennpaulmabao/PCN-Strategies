@@ -128,18 +128,19 @@ hr{
     background-color: #004a80;
     color: #ffffff;
     font-weight: 200;
-    font-size: .9em;
-    padding: 5% 0;
+    font-size: 14px;
+    padding: 15px 0;
     border-radius: 5px;
     width: 100%;
     margin: 1% 0;
 }
-
+.btn-section a{
+}
 .btn-stroke{
     color: #ffffff;
     font-weight: 200;
     font-size: .9em;
-    padding: 5% 0;
+    padding: 15px 0;
     border-radius: 5px;
     width: 100%;
     margin: 1% 0;
@@ -300,7 +301,7 @@ form{
     border-radius: 5px;
     margin: 0 10px;
     font-weight: 200;
-    font-size: 18px;
+    font-size: 14px;
     background-color: #004a80;
 }
 .pcn-hero-btn-stroke{
@@ -319,7 +320,7 @@ form{
     border-radius: 5px;
     margin: 1% auto;
     font-weight: 200;
-    font-size: 18px;
+    font-size: 14px;
     background-color: #004a80;
     width: 90%;
     text-align: left;
@@ -327,7 +328,6 @@ form{
 .btn:hover {
     background-color:#0179d0;
     color: white;
-    border: none;
 }
 .pcn-row-2{
     display: flex;
