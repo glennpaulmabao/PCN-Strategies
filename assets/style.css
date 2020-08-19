@@ -266,7 +266,9 @@ form{
 .pcn-hero{
     padding:7% 10% 20% 10%;
     background-repeat: no-repeat;
+    background-size: cover ;
     height: 493px;
+    width: 100%;
 }
 .pcn-hero-text h1{
     color: white;
