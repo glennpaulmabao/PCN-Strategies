@@ -232,6 +232,10 @@ hr{
     color: #ffffff;
     font-weight: 700;
     font-size: 25px;
+    text-shadow:2px 2px 30px #004a80;
+}
+.form-heading p{
+    text-shadow:2px 2px 30px #004a80;
 }
 form{
     width: 80%;
