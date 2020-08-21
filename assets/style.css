@@ -316,6 +316,12 @@ form{
     width: 90%;
     text-align: left;
 }
+
+.hero-btn{
+    display: flex;
+    justify-content: center;
+}
+
 .btn:hover {
     background-color:#0179d0;
     color: white;
@@ -362,3 +368,29 @@ form{
     left: auto !important;
     right: 0px;
 }
+
+@media only screen and (max-width: 600px) {
+   .pcn-row-2{
+       margin: 500px;
+       display: inline;
+   }
+
+   .hero-btn{
+       display: inline;
+       margin: 3% 0;
+   }
+   .pcn-hero-btn{
+       margin: 2% 0;
+   }
+   .pcn-hero-btn-he{
+       padding-left: 30px;
+       padding-right: 30px;
+       margin-top: 10px;
+       width: 100%;
+   }
+
+   .pcn-from-input{
+       margin: 2% 0;
+   }
+
+  }
