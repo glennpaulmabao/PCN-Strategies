@@ -16,7 +16,7 @@
     margin: 0 0 0 10%;
     align-self: center;
     vertical-align: middle;
-}
+} 
 .carousel{
     height: 448px;
     width: 100%;
@@ -347,4 +347,18 @@ form{
     margin: 4% 0 0 0;
     font-size: 14px;
     font-weight: 200;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+          
+.nav-link {
+    padding-right: .7rem !important;
+    padding-left: .7rem !important;
+}
+          
+.ml-auto .dropdown-menu {
+    left: auto !important;
+    right: 0px;
 }
