@@ -328,7 +328,7 @@ form{
 }
 .pcn-row-2{
     display: flex;
-    margin: 10% auto;
+    margin: 150px auto;
     width: 90%;
 }
 .pcn-row-2 p{
@@ -348,11 +348,21 @@ form{
     padding: none;
     margin: none;
 }
+
+.pcn-list{
+    padding: 0px 50px;
+}
+
 .pcn-list li{
     line-height: 1%;
     margin: 4% 0 0 0;
     font-size: 14px;
     font-weight: 200;
+}
+
+.cc-btn{
+    width: 50%;
+    margin: 1% auto;
 }
 
 .navbar-nav {
@@ -371,7 +381,7 @@ form{
 
 @media only screen and (max-width: 600px) {
    .pcn-row-2{
-       margin: 500px;
+       margin: 10% auto;
        display: inline;
    }
 
@@ -391,5 +401,9 @@ form{
 
    .pcn-from-input{
        margin: 2% 0;
+   }
+   .cc-btn{
+       width: 100%;
+       margin: auto 0px;
    }
   }
