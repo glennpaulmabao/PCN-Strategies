@@ -100,8 +100,12 @@ hr{
 }
 
 .solutions-box img{
-    height: 15%;
+    height: 40px;
     width: auto;
+}
+
+.solutions-box h1{
+    font-size: 18px;
 }
 
 .solutions-box:hover{
