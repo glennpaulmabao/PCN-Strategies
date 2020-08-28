@@ -300,6 +300,12 @@ form{
     height: 493px;
     width: 100%;
 }
+.pcn-contact-hero{
+    height: 200px;
+    width: 100%;
+    margin: 0px;
+    color: #ffffff;
+}
 .pcn-hero-text h1{
     color: white;
     font-weight: 300;
