@@ -67,7 +67,7 @@
 }
 .carousel-indicators{
     justify-content: left;
-    margin: 0 0 -6% 9%;
+    margin: 0 0 -6% 7.5%;
     padding: 0px;
 }
 .carousel-btn{
@@ -452,6 +452,11 @@ h1{
     font-weight: 300;
 }
 @media only screen and (max-width: 1112px) {
+    .carousel-indicators{
+        justify-content: left;
+        margin: 0 0 -6% 8%;
+        padding: 0px;
+    }
     .pcn-icon-btn{
         height: 20px;
         width: auto;
@@ -486,6 +491,11 @@ h1{
     }
 }
 @media only screen and (max-width: 768px) {
+    .carousel-indicators{
+        justify-content: left;
+        margin: 0 0 -6% 9%;
+        padding: 0px;
+    }
     .pcn-icon-btn{
         height: 20px;
         width: auto;
@@ -500,6 +510,11 @@ h1{
 }
 
 @media only screen and (max-width: 600px) {
+    .carousel-indicators{
+        justify-content: left;
+        margin: 0 0 -6% 5%;
+        padding: 0px;
+    }
     .topheader{
         text-align: center;
         font-size: 12px;
