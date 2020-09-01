@@ -307,6 +307,36 @@ hr{
     width: 70%;
     margin: 2% auto;
 }
+
+.pcn-mobility-hero{
+    padding:0 10% 0 10%;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    height: 493px;
+    width: 100%;
+}
+
+.pcn-mobility-hero-text h1{
+    color: white;
+    font-weight: 800;
+    width: 70%;
+    margin: 10% auto;
+}
+.pcn-mobility-hero-text p{
+    color: white;
+    font-weight: 200;
+    width: 70%;
+    margin: 2% auto;
+}
+
+.mobility-text-bg{
+    background-color: #ffffff;
+    padding: 50px;
+}
+.pcn-mobility-technologies{
+    margin: 10%;
+}
+
 .pcn-hero-btn{
     color: white;
     padding: 25px 50px;
