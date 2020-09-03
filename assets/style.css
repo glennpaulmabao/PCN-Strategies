@@ -132,11 +132,29 @@ hr{
     font-size:14px;
 }
 .solutions-box{
+    background-color:#ffffff;
     margin: 5% 0;
     padding: 10%;
     border-radius: 5px;
     position: relative;
     height: 320px;
+}
+
+.mobility-box{
+    background-blend-mode:color;
+    background-color:#808080;
+    background-size: 50px 50px;
+    margin: 5% 0;
+    padding: 10%;
+    border-radius: 5px;
+    position: relative;
+    height: 320px;
+}
+
+.h1-shadow{
+    -webkit-text-shadow: 10px 10px 98px 56px rgba(0,0,0,0.75);
+    -moz-text-shadow: 10px 10px 98px 56px rgba(0,0,0,0.75);
+    text-shadow: 10px 10px 98px 56px rgba(0,0,0,0.75);
 }
 
 .solutions-box img{
@@ -223,12 +241,27 @@ hr{
     width: 100%;
     background-image: url(./images/formbg.png);
     background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .he-form-bg{
     height: 654px;
     width: 100%;
     background-image: url(./images/higher-ed-formbg.png);
     background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.rugged-form-bg{
+    height: 654px;
+    width: 100%;
+    background-image: url(./images/531018286.png);
+    background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .k12-form-bg{
     height: 654px;
@@ -238,6 +271,9 @@ hr{
     background-position: center;
     background-repeat: no-repeat;
     background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .dc-form-bg{
     margin: 10% 0 0 0;
@@ -245,6 +281,9 @@ hr{
     width: 100%;
     background-image: url(./images/dc-form-bg.png);
     background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .mobility-form-bg{
     margin: 10% 0 0 0;
@@ -263,18 +302,27 @@ hr{
     width: 100%;
     background-image: url(./images/educ-form-bg.png);
     background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .security-formbg{
     height: 654px;
     width: 100%;
     background-image: url(./images/security-formbg.png);
     background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .cloud-formbg{
     height: 654px;
     width: 100%;
     background-image: url(./images/cloud-formbg.png);
     background-color: #0d3051;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .form-heading{
     width: 80%;
