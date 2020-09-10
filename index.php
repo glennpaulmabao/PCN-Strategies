@@ -1,22 +1,32 @@
 <?php 
-if(isset($_POST['submit'])){
-    $to = "glennpaulmabao@yahoo.com.ph"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $name . " " . $email . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    if(isset($_POST['btn-send']))
+    {
+       $Name = $_POST['Name'];
+       $Email = $_POST['Email'];
+       $Phone = $_POST['Phone'];
+       $Msg = $_POST['msg'];
+
+       if(empty($Name) || empty($Email) || empty($Phone) || empty($Msg))
+       {
+           header('location:index.php?error');
+       }
+       else
+       {
+           $to = "glennfalse.ph@gmail.com";
+
+           if(mail($to,$Phone,$Msg,$Email))
+           {
+               header("location:index.php?success");
+           }
+       }
+    }
+    else
+    {
+        header("location:index.php");
     }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +38,7 @@ if(isset($_POST['submit'])){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 <link rel="stylesheet" href="assets/style.css">
-<title>Good morning Form</title>
+<title>PCN Strategies | Official Website</title>
 </head>
 <body>
 
@@ -53,7 +63,7 @@ if(isset($_POST['submit'])){
 
     <nav class="navbar sticky-top navbar-expand-md navbar-light shadow" style="background-color: white;">
         <div class="container">
-            <a class="navbar-brand" href="./index.html">
+            <a class="navbar-brand" href="./index.php">
                 <img src="./assets/images/logo.png" style="width:175px; height: auto;" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -64,26 +74,26 @@ if(isset($_POST['submit'])){
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link active" href="index.html">HOME</a>
+                        <a class="nav-link active" href="index.php">HOME</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           SOLUTIONS
                         </a>
                     <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="mobility.html">MOBILITY</a>
-                            <a class="dropdown-item" role="presentation" href="education.html">EDUCATION&nbsp;</a>
-                            <a class="dropdown-item" role="presentation" href="workforce.html">REMOTE WORKFORCE</a>
-                            <a class="dropdown-item" role="presentation" href="datacenter.html">DATA CENTER</a>
-                            <a class="dropdown-item" role="presentation" href="networking.html">NETWORKING</a>
-                            <a class="dropdown-item" role="presentation" href="security.html">SECURITY</a>
-                            <a class="dropdown-item" role="presentation" href="cloud.html">CLOUD</a></div>
+                            <a class="dropdown-item" role="presentation" href="mobility.php">MOBILITY</a>
+                            <a class="dropdown-item" role="presentation" href="education.php">EDUCATION&nbsp;</a>
+                            <a class="dropdown-item" role="presentation" href="workforce.php">REMOTE WORKFORCE</a>
+                            <a class="dropdown-item" role="presentation" href="datacenter.php">DATA CENTER</a>
+                            <a class="dropdown-item" role="presentation" href="networking.php">NETWORKING</a>
+                            <a class="dropdown-item" role="presentation" href="security.php">SECURITY</a>
+                            <a class="dropdown-item" role="presentation" href="cloud.php">CLOUD</a></div>
                     </li>
                     <li class="nav-item" role="presentation">
-                          <a class="nav-link" href="Products.html">PRODUCTS</a>
+                          <a class="nav-link" href="Products.php">PRODUCTS</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                          <a class="nav-link" href="ContactUs.html">CONTACT US</a>
+                          <a class="nav-link" href="ContactUs.php">CONTACT US</a>
                     </li>
                 </ul>
             </div>
@@ -106,7 +116,7 @@ if(isset($_POST['submit'])){
                     <p>With today’s work environment constantly on-the-go, equip your workforce with devices they need for success wherever they are. Let PCN help you capture your data and manage your operations right from your fingertips.</p>
                 </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <a href="ContactUs.html" class="btn carousel-btn" role="button">CONTACT US</a>
+                <a href="ContactUs.php" class="btn carousel-btn" role="button">CONTACT US</a>
               </div>
             </div>   
           </div>
@@ -118,7 +128,7 @@ if(isset($_POST['submit'])){
                     <p>Create an exceptional learning institution for students and staff — complete with reliable connectivity, robust cybersecurity and innovation hubs.</p>
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-4 col-sm-12">
-                    <a href="ContactUs.html" class="btn carousel-btn" role="button">CONTACT US</a>
+                    <a href="ContactUs.php" class="btn carousel-btn" role="button">CONTACT US</a>
                 </div>
             </div>   
           </div>
@@ -130,7 +140,7 @@ if(isset($_POST['submit'])){
                     <p>Does your security strategy benefit you, or your cyber adversaries?</p>
                 </div>
                 <div class="col-lg-4 col-sm-12 col-md-4 col-sm-12">
-                    <a href="ContactUs.html" class="btn carousel-btn" role="button">CONTACT US</a>
+                    <a href="ContactUs.php" class="btn carousel-btn" role="button">CONTACT US</a>
                 </div>
             </div>   
           </div>
@@ -157,7 +167,7 @@ if(isset($_POST['submit'])){
                     <h1>Mobility Solutions</h1>
                     <p style="height:80px;">With today’s work environment constantly on-the-go, equip your workforce with devices.</p>
                     <div class="row">
-                        <a href="mobility.html" class="btn" role="button">LEARN MORE</a>
+                        <a href="mobility.php" class="btn" role="button">LEARN MORE</a>
                     </div>
                 </div>
             </div>
@@ -167,11 +177,11 @@ if(isset($_POST['submit'])){
                     <img src="./assets/images/icons/icon-education.png" alt="">
                     <h1>Education</h1>
                     <p style="height:80px;">
-                        <a href="higher-ed.html" class="btn" style="padding: 8px 0;" role="button">HIGHER EDUCATION</a>
+                        <a href="higher-ed.php" class="btn" style="padding: 8px 0;" role="button">HIGHER EDUCATION</a>
                         <a href="k12.html" class="btn" style="padding: 8px 0;" role="button">K12</a>                    
                     </p>
                     <div class="row">
-                        <a href="education.html" class="btn" role="button">LEARN MORE</a>
+                        <a href="education.php" class="btn" role="button">LEARN MORE</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +192,7 @@ if(isset($_POST['submit'])){
                     <h1>Remote Workforce</h1>
                     <p style="height:80px;">Many PCN partners are offering free trials and offers for many work from home solutions.</p>
                     <div class="row">
-                        <a href="workforce.html" class="btn" role="button">LEARN MORE</a>
+                        <a href="workforce.php" class="btn" role="button">LEARN MORE</a>
                     </div>
                 </div>
             </div>
@@ -193,7 +203,7 @@ if(isset($_POST['submit'])){
                     <h1>Data Center</h1>
                     <p style="height:80px;">Out of sight, out of mind, on budget and in sync: the dream of the harmonious, optimized data center!</p>
                     <div class="row">
-                        <a href="datacenter.html" class="btn" role="button">LEARN MORE</a>
+                        <a href="datacenter.php" class="btn" role="button">LEARN MORE</a>
                     </div>
                 </div>
             </div>
@@ -209,7 +219,7 @@ if(isset($_POST['submit'])){
                     <h1>Networking</h1>
                     <p style="height:80px;">Out of sight, out of mind, on budget and in sync: the dream of the harmonious, optimized data center!</p>
                     <div class="row">
-                        <a href="datacenter.html" class="btn" role="button">LEARN MORE</a>
+                        <a href="datacenter.php" class="btn" role="button">LEARN MORE</a>
                     </div>
                 </div>
             </div>
@@ -220,7 +230,7 @@ if(isset($_POST['submit'])){
                     <h1>Security</h1>
                     <p style="height:80px;">Does your security strategy benefit you, or your cyber adversaries?</p>
                     <div class="row">
-                        <a href="security.html" class="btn" role="button">LEARN MORE</a>
+                        <a href="security.php" class="btn" role="button">LEARN MORE</a>
                     </div>
                 </div>
             </div>
@@ -231,7 +241,7 @@ if(isset($_POST['submit'])){
                 <h1>Cloud</h1>
                 <p style="height:80px;">Are you ready for the next phase of digital transformation? Take your organization into the Cloud.</p>
                 <div class="row">
-                    <a href="cloud.html" class="btn" role="button">LEARN MORE</a>
+                    <a href="cloud.php" class="btn" role="button">LEARN MORE</a>
                 </div>
             </div>
         </div>
@@ -243,7 +253,8 @@ if(isset($_POST['submit'])){
             <h1>REQUEST A CONSULTATION</h1>
             <h1>_______________</h1>
             <p>Fill up the form belown and submit your questions</p>
-
+        </div>
+        <form  action="index.php" method="POST" class="shadow" style="width: 80%; height: 547px; margin: 100px auto 0 auto; background-color: #ffffff; padding: 5%;">
             <?php 
                             $Msg = "";
                             if(isset($_GET['error']))
@@ -258,10 +269,8 @@ if(isset($_POST['submit'])){
                                 echo '<div class="alert alert-success">'.$Msg.'</div>';
                             }
                         
-                        ?>
-        </div>
-        <form  action="process.php" method="post" class="shadow" style="width: 80%; height: 547px; margin: 100px auto 0 auto; background-color: #ffffff; padding: 5%;">
-            <div class="form-row">
+            ?>    
+        <div class="form-row">
               <div class="col-lg col-sm pcn-from-input">
                 <input type="text" name="Name" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Full Name">
               </div>
@@ -271,12 +280,13 @@ if(isset($_POST['submit'])){
               <div class="col-lg col-sm pcn-from-input">
                 <input type="text" name="Phone" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Phone">
               </div>
-            </div>
+        </div>
         <br>
         <br>
             <div class="form-row">
                 <div class="col-lg-8 col-sm">
-                    <textarea class="form-control-text-area" style="border-radius: 0px;" id="exampleFormControlTextarea1" rows="12" placeholder="Message" name="msg"></textarea>                </div>
+                    <textarea  name="msg" class="form-control-text-area" style="border-radius: 0px;" id="exampleFormControlTextarea1" rows="12" placeholder="Message"></textarea>
+                </div>
                 <div class="col-lg col-sm pcn-from-input" >
                 <button class="btn" style="position: absolute; bottom: 0px;" name="btn-send"> Send </button>
                 </div>
@@ -314,10 +324,10 @@ if(isset($_POST['submit'])){
 
             <div class="col-2">
                 <h1>Links</h1>
-                <a href="index.html"><li>Home</li></a>
-                <a href="index.html"><li>Services</li></a>
-                <a href="index.html"><li>Products</li></a>
-                <a href="index.html"><li>Contact</li></a>
+                <a href="index.php"><li>Home</li></a>
+                <a href="index.php"><li>Services</li></a>
+                <a href="index.php"><li>Products</li></a>
+                <a href="index.php"><li>Contact</li></a>
             </div>
 
 
