@@ -1,21 +1,31 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "glennpaulmabao@yahoo.com.ph"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['full_name'];
-    $phone = $_POST['phone'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $full_name . " " . $email . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $full_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $full_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
+<?php
+if(isset($_POST["submit"])){
+// Checking For Blank Fields..
+if($_POST["name"]==""||$_POST["email"]==""||$_POST["phone"]==""||$_POST["message"]==""){
+echo "Fill All Fields..";
+}else{
+// Check if the "Sender's Email" input field is filled out
+$email=$_POST['email'];
+// Sanitize E-mail Address
+$email =filter_var($email, FILTER_SANITIZE_EMAIL);
+// Validate E-mail Address
+$email= filter_var($email, FILTER_VALIDATE_EMAIL);
+if (!$email){
+echo "Invalid Sender's Email";
+}
+else{
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+$headers = 'From:'. $email2 . "rn"; // Sender's Email
+$headers .= 'Cc:'. $email2 . "rn"; // Carbon copy to Sender
+// Message lines should not exceed 70 characters (PHP rule), so wrap it
+$message = wordwrap($message, 70);
+// Send Mail By PHP Mail Function
+mail("glennpaulmabao@yahoo.com.ph", $phone, $message, $headers);
+echo "Your mail has been sent successfuly ! Thank you for your feedback";
+}
+}
+}
 ?>
 
 <!DOCTYPE html>
@@ -244,10 +254,10 @@ if(isset($_POST['submit'])){
             <h1>_______________</h1>
             <p>Fill up the form belown and submit your questions</p>
         </div>
-        <form  action="" method="post" class="shadow" style="width: 80%; height: 547px; margin: 100px auto 0 auto; background-color: #ffffff; padding: 5%;">
+        <form  action="#" method="post" class="shadow" style="width: 80%; height: 547px; margin: 100px auto 0 auto; background-color: #ffffff; padding: 5%;">
             <div class="form-row">
               <div class="col-lg col-sm pcn-from-input">
-                <input type="text" name="full_name" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Full Name">
+                <input type="text" name="name" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Full Name">
               </div>
               <div class="col-lg col-sm pcn-from-input">
                 <input type="text" name="email" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Email">
