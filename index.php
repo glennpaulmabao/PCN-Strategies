@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 <link rel="stylesheet" href="assets/style.css">
-<title>PCN Strategies | Official Website</title>
+<title>Good morning Form</title>
 </head>
 <body>
 
@@ -243,26 +243,42 @@ if(isset($_POST['submit'])){
             <h1>REQUEST A CONSULTATION</h1>
             <h1>_______________</h1>
             <p>Fill up the form belown and submit your questions</p>
+
+            <?php 
+                            $Msg = "";
+                            if(isset($_GET['error']))
+                            {
+                                $Msg = " Please Fill in the Blanks ";
+                                echo '<div class="alert alert-danger">'.$Msg.'</div>';
+                            }
+
+                            if(isset($_GET['success']))
+                            {
+                                $Msg = " Your Message Has Been Sent ";
+                                echo '<div class="alert alert-success">'.$Msg.'</div>';
+                            }
+                        
+                        ?>
         </div>
-        <form  action="#" method="post" class="shadow" style="width: 80%; height: 547px; margin: 100px auto 0 auto; background-color: #ffffff; padding: 5%;">
+        <form  action="process.php" method="post" class="shadow" style="width: 80%; height: 547px; margin: 100px auto 0 auto; background-color: #ffffff; padding: 5%;">
             <div class="form-row">
               <div class="col-lg col-sm pcn-from-input">
-                <input type="text" name="name" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Full Name">
+                <input type="text" name="Name" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Full Name">
               </div>
               <div class="col-lg col-sm pcn-from-input">
-                <input type="text" name="email" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Email">
+                <input type="text" name="Email" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Email">
               </div>
               <div class="col-lg col-sm pcn-from-input">
-                <input type="text" name="phone" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Phone">
+                <input type="text" name="Phone" class="form-control form-control-lg" style="border-radius: 0px;" placeholder="Phone">
               </div>
             </div>
         <br>
         <br>
             <div class="form-row">
                 <div class="col-lg-8 col-sm">
-                    <textarea class="form-control-text-area" style="border-radius: 0px;" id="exampleFormControlTextarea1" rows="12" placeholder="Message" name="message"></textarea>                </div>
+                    <textarea class="form-control-text-area" style="border-radius: 0px;" id="exampleFormControlTextarea1" rows="12" placeholder="Message" name="msg"></textarea>                </div>
                 <div class="col-lg col-sm pcn-from-input" >
-                    <input class="btn" style="position: absolute; bottom: 0px;" type="submit" name="submit" value="submit">
+                <button class="btn" style="position: absolute; bottom: 0px;" name="btn-send"> Send </button>
                 </div>
               </div>
           </form>
