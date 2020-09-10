@@ -38,7 +38,7 @@ echo "Your mail has been sent successfuly ! Thank you for your feedback";
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 <link rel="stylesheet" href="assets/style.css">
-<title>This is PHP</title>
+<title>New PHP</title>
 </head>
 <body>
 
